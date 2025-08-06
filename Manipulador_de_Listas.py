@@ -43,3 +43,37 @@ class Manipulador_de_Lista:
     #Retorna a lista atual
     def mostrar_lista(self):
         print(f"Lista = {self.lista}")
+
+"""
+--------------
+LAYOUT DA TELA
+--------------
+"""
+#Define globalmente a quantidade de traços
+quantidade_tracos = 100
+
+#Configura o título da sessão
+def configura_titulo(titulo):
+    
+    #Transforma o título em letras maiúsculas
+    titulo = titulo.upper()
+    
+    #Determina o tamanho do título
+    tamanho_titulo = len(titulo)
+    
+    #Calcula a quantidade de espaços para que o título esteja centralizado na tela
+    quantidade_espacos = (quantidade_tracos - tamanho_titulo) // 2
+    
+    return titulo, quantidade_espacos
+
+#Imprime o delimitador visual
+def delimitador_visual():
+    print("-" * quantidade_tracos)
+
+#Imprime título
+def imprime_titulo(titulo, quantidade_espacos):
+    print()
+    delimitador_visual()
+    print(" " * quantidade_espacos, titulo)
+    delimitador_visual()
+    print()
