@@ -1,3 +1,4 @@
+"""
 --------------
 CLASSE
 --------------
@@ -77,7 +78,7 @@ def imprime_titulo(titulo, quantidade_espacos):
     print(" " * quantidade_espacos, titulo)
     delimitador_visual()
     print()
-
+"""
 --------------
 TRATAMENTO DE ERROS
 --------------
@@ -93,3 +94,28 @@ def ler_numeros(pergunta, condicao, retorno_positivo, retorno_negativo):
             print(retorno_negativo)
     except ValueError:
         print("Por gentileza insira um valor numérico inteiro!")
+
+"""
+--------------
+FUNÇÕES GERAIS
+--------------    
+"""
+#Imprime o menu principal
+def menu():
+    #Ajuste do título
+    titulo, quantidade_espacos = configura_titulo("Menu")
+    #Imprime o título
+    imprime_titulo(titulo, quantidade_espacos)
+    
+    #Imprime as opções
+    print("Opções:")
+    print("     1. Adicionar um elemento no final da lista;")
+    print("     2. Remover a primeira ocorrência do elemento na lista;")
+    print("     3. Exibir o maior valor da lista;")
+    print("     4. Exibir o menor valor da lista;")
+    print("     5. Calcular média dos elementos da lista;")
+    print("     6. Exibir lista;")
+    print("     7. Sair.")
+	
+    #Imprime um delimitador visual
+    delimitador_visual()
