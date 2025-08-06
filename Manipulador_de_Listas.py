@@ -16,3 +16,8 @@ class Manipulador_de_Lista:
     #Remove a primeira ocorrência do elemento na lista
     def remover_elemento(self, elemento):
         self.lista.remove(elemento)
+        
+    #Encontra e retorna o maior elemento da lista
+    def encontrar_maior(self):
+        maior = self.lista.max()
+        return = maior
