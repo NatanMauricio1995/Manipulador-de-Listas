@@ -77,3 +77,19 @@ def imprime_titulo(titulo, quantidade_espacos):
     print(" " * quantidade_espacos, titulo)
     delimitador_visual()
     print()
+
+--------------
+TRATAMENTO DE ERROS
+--------------
+"""
+#Capta o valor numérico esperado e 
+def ler_numeros(pergunta, condicao, retorno_positivo, retorno_negativo):
+    try:
+        numero = int(input(pergunta))
+        if(condicao == True):
+            print(retorno_positivo)
+            return numero
+        else:
+            print(retorno_negativo)
+    except ValueError:
+        print("Por gentileza insira um valor numérico inteiro!")
