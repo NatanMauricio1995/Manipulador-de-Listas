@@ -26,3 +26,16 @@ class Manipulador_de_Lista:
     def encontrar_menor(self):
         menor = self.lista.min()
         return menor
+
+    #Calcula e retorna a média dos elementos na lista
+    def calcular_media(self):
+        #Calcula quantos elementos a lista possui
+        quantidade_de_elementos = len(self.lista) 
+        
+        #Soma todos os elementos da lista
+        soma_dos_elementos = self.lista.sum()
+        
+        #Calcula a média dos elementos
+        media = soma_dos_elementos / quantidade_de_elementos
+        
+        return media
