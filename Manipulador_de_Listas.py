@@ -21,3 +21,8 @@ class Manipulador_de_Lista:
     def encontrar_maior(self):
         maior = self.lista.max()
         return = maior
+
+    #Encontra e retorna o menor elemento da lista
+    def encontrar_menor(self):
+        menor = self.lista.min()
+        return menor
