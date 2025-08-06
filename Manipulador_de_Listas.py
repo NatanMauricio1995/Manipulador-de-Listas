@@ -82,11 +82,11 @@ def imprime_titulo(titulo, quantidade_espacos):
 TRATAMENTO DE ERROS
 --------------
 """
-#Capta o valor numérico esperado e 
+#Capta o valor numérico esperado e verifica a entrada
 def ler_numeros(pergunta, condicao, retorno_positivo, retorno_negativo):
     try:
         numero = int(input(pergunta))
-        if(condicao == True):
+        if(condicao(numero)):
             print(retorno_positivo)
             return numero
         else:
