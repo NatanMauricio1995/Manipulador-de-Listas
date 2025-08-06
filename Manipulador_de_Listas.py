@@ -85,15 +85,19 @@ TRATAMENTO DE ERROS
 """
 #Capta o valor numérico esperado e verifica a entrada
 def ler_numeros(pergunta, condicao, retorno_positivo, retorno_negativo):
-    try:
-        numero = int(input(pergunta))
-        if(condicao(numero)):
-            print(retorno_positivo)
-            return numero
-        else:
-            print(retorno_negativo)
-    except ValueError:
-        print("Por gentileza insira um valor numérico inteiro!")
+    while True:
+        try:
+            numero = int(input(pergunta))
+            if(condicao(numero)):
+                print(retorno_positivo)
+                break
+            else:
+                print(retorno_negativo)
+        except ValueError:
+            print("Por gentileza insira um valor numérico inteiro!")
+    
+    return numero
+
 
 """
 --------------
@@ -104,6 +108,7 @@ FUNÇÕES GERAIS
 def menu():
     #Ajuste do título
     titulo, quantidade_espacos = configura_titulo("Menu")
+	
     #Imprime o título
     imprime_titulo(titulo, quantidade_espacos)
     
