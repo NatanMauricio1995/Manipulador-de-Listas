@@ -90,14 +90,11 @@ def ler_numeros(pergunta, condicao, retorno_positivo, retorno_negativo):
             numero = int(input(pergunta))
             if(condicao(numero)):
                 print(retorno_positivo)
-                break
+                return numero
             else:
                 print(retorno_negativo)
         except ValueError:
             print("Por gentileza insira um valor numérico inteiro!")
-    
-    return numero
-
 
 """
 --------------
@@ -124,3 +121,23 @@ def menu():
 	
     #Imprime um delimitador visual
     delimitador_visual()
+	
+#Define escolha de continuar
+def coninuar():
+    #Zera o parâmetro
+    numero = 0
+    
+    #Loop para garantir a repetição
+    while (numero != 2):
+        #Imprime as opções
+        print("Deseja inserir novos números à lista?")
+        print("     1. Sim")
+        print("     2. Não")
+        numero = ler_numeros(
+            "Insira o valor da opção escolhida:",
+            lambda x:((x == 1) or (x == 2)),
+            "Escolha recebida!",
+            "Insira '1' para SIM e '2' para NÃO!"
+        )
+    
+    return numero
