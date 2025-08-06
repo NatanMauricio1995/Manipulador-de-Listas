@@ -39,3 +39,7 @@ class Manipulador_de_Lista:
         media = soma_dos_elementos / quantidade_de_elementos
         
         return media
+
+    #Retorna a lista atual
+    def mostrar_lista(self):
+        print(f"Lista = {self.lista}")
